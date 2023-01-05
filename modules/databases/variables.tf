@@ -17,3 +17,13 @@ variable "DATABASE_USER_PASSWORD" {
 variable "REGION" {
   type = string
 }
+
+variable "CREATE_NON_PRODUCTION_RESOURCES" {
+  type = bool
+  default = false
+}
+
+variable "CREATE_DATABASES" {
+  type = bool
+  default = true
+}

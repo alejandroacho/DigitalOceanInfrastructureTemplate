@@ -9,13 +9,19 @@ terraform {
 
 resource "digitalocean_project" "project" {
   description = var.PROJECT_DESCRIPTION
-  environment = var.PROJECT_ENVIRONMENT
+  environment = "Production"
   name        = var.PROJECT_NAME
   resources   = [
-    var.DROPLET_URN,
-    var.DOMAIN_URN,
-    var.MYSQL_DATABASE_URN,
-    var.REDIS_DATABASE_URN,
-    var.SPACE_URN
+    var.PRODUCTION_DROPLET_URN,
+    var.DEV_STAGING_DROPLET_URN,
+    var.PRODUCTION_MYSQL_DATABASE_URN,
+    var.PRODUCTION_REDIS_DATABASE_URN,
+    var.PRODUCTION_SPACE_URN,
+    var.DEV_STAGING_SPACE_URN,
+    var.DEV_STAGING_MYSQL_DATABASE_URN,
+    var.DEV_STAGING_REDIS_DATABASE_URN,
+    var.PRODUCTION_DOMAIN_URN,
+    var.STAGING_DOMAIN_URN,
+    var.DEV_DOMAIN_URN,
   ]
 }

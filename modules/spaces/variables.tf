@@ -13,3 +13,13 @@ variable "DOMAIN" {
 variable "REGION" {
   type = string
 }
+
+variable "CREATE_NON_PRODUCTION_RESOURCES" {
+  type = bool
+  default = false
+}
+
+variable "CREATE_SPACES" {
+  type = bool
+  default = false
+}

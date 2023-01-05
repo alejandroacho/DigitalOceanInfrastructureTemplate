@@ -10,15 +10,7 @@ variable "PROJECT_DESCRIPTION" {
   default = ""
 }
 
-variable "PROJECT_ENVIRONMENT" {
-  default = ""
-}
-
 variable "DOMAIN_NAME" {
-  default = ""
-}
-
-variable "DOMAIN_EXTENSION" {
   default = ""
 }
 
@@ -48,4 +40,16 @@ variable "DIGITALOCEAN_SPACES_CLIENT_ID" {
 
 variable "REGION" {
   default = "fra1"
+}
+
+variable "CREATE_NON_PRODUCTION_RESOURCES" {
+  default = false
+}
+
+variable "CREATE_DATABASES" {
+  default = false
+}
+
+variable "CREATE_SPACES" {
+  default = false
 }

@@ -6,26 +6,46 @@ variable "PROJECT_DESCRIPTION" {
   type = string
 }
 
-variable "PROJECT_ENVIRONMENT" {
+variable "PRODUCTION_DROPLET_URN" {
   type = string
 }
 
-variable "DROPLET_URN" {
+variable "DEV_STAGING_DROPLET_URN" {
   type = string
 }
 
-variable "DOMAIN_URN" {
+variable "PRODUCTION_DOMAIN_URN" {
   type = string
 }
 
-variable "SPACE_URN" {
+variable "DEV_DOMAIN_URN" {
   type = string
 }
 
-variable "MYSQL_DATABASE_URN" {
+variable "STAGING_DOMAIN_URN" {
   type = string
 }
 
-variable "REDIS_DATABASE_URN" {
+variable "PRODUCTION_SPACE_URN" {
+  type = string
+}
+
+variable "DEV_STAGING_SPACE_URN" {
+  type = string
+}
+
+variable "PRODUCTION_MYSQL_DATABASE_URN" {
+  type = string
+}
+
+variable "PRODUCTION_REDIS_DATABASE_URN" {
+  type = string
+}
+
+variable "DEV_STAGING_MYSQL_DATABASE_URN" {
+  type = string
+}
+
+variable "DEV_STAGING_REDIS_DATABASE_URN" {
   type = string
 }
