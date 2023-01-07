@@ -6,7 +6,7 @@ This project create a whole infrastructure for your project in DigitalOcean.
 - [Terraform.](https://developer.hashicorp.com/terraform)
 - [DigitalOcean account.](https://m.do.co/c/09d0426d7d1f)
 
-## First steps
+## Instructions
 1. Install Terraform following [this steps](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform).
 2. Create a `terraform.tfvars` file like the following one:
 
