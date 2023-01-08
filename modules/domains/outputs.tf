@@ -3,13 +3,9 @@ output "production_domain_urn" {
 }
 
 output "dev_domain_urn" {
-  value = length(resource.digitalocean_domain.dev_domain) > 0 ? (
-    resource.digitalocean_domain.dev_domain[0].urn
-  ) : ""
+  value = try(resource.digitalocean_domain.dev_domain[0].urn, "")
 }
 
 output "staging_domain_urn" {
-  value = length(resource.digitalocean_domain.staging_domain) > 0 ? (
-    resource.digitalocean_domain.staging_domain[0].urn
-  ) : ""
+  value = try(resource.digitalocean_domain.staging_domain[0].urn, "")
 }

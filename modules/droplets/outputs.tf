@@ -7,13 +7,9 @@ output "production_ipv4" {
 }
 
 output "dev_staging_urn" {
-  value = length(resource.digitalocean_droplet.dev_staging_droplet) > 0 ? (
-    resource.digitalocean_droplet.dev_staging_droplet[0].urn
-  ) : ""
+  value = try(resource.digitalocean_droplet.dev_staging_droplet[0].urn, "")
 }
 
 output "dev_staging_ipv4" {
-  value = length(resource.digitalocean_droplet.dev_staging_droplet) > 0 ? (
-    resource.digitalocean_droplet.dev_staging_droplet[0].ipv4_address
-  ) : ""
+  value = try(resource.digitalocean_droplet.dev_staging_droplet[0].ipv4_address, "")
 }

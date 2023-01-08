@@ -51,3 +51,6 @@ You can decide to create or not the database and/or the space setting the corres
 |With Databases|17€|34€|
 |With Spaces|42€|84€|
 |With both Spaces and Database|47€|94€|
+
+⚠️ CAUTION:
+You might apply twice if you delete an element and then you recreate it in order to attach it to the project after create it.

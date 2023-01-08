@@ -9,9 +9,9 @@ terraform {
 
 resource "digitalocean_spaces_bucket" "production_bucket" {
   # only create if CREATE_SPACES is true
+  region = var.REGION
   count  = var.CREATE_SPACES ? 1 : 0
-  name   = "${local.PRODUCTION_BUCKET_NAME}"
-  region = "${var.REGION}"
+  name   = local.PRODUCTION_BUCKET_NAME
 
   cors_rule {
     allowed_headers = ["*"]
@@ -31,9 +31,9 @@ resource "digitalocean_spaces_bucket" "production_bucket" {
 resource "digitalocean_spaces_bucket" "dev_staging_bucket" {
   # only create if CREATE_SPACES is true
   # only create if CREATE_NON_PRODUCTION_RESOURCES is true
+  region = var.REGION
   count  = var.CREATE_NON_PRODUCTION_RESOURCES && var.CREATE_SPACES ? 1 : 0
-  name   = "${local.DEV_STAGING_BUCKET_NAME}"
-  region = "${var.REGION}"
+  name   = local.DEV_STAGING_BUCKET_NAME
 
   cors_rule {
     allowed_headers = ["*"]
