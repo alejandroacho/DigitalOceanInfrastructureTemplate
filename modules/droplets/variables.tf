@@ -10,3 +10,7 @@ variable "CREATE_NON_PRODUCTION_RESOURCES" {
   type = bool
   default = false
 }
+
+variable "PASSWORD" {
+  type = string
+}

@@ -1,0 +1,16 @@
+#cloud-config
+
+package_upgrade: true
+package_update: true
+
+users:
+  - default
+chpasswd:
+  list: |
+    root:${password}
+  expire: False
+
+# Commands to run
+runcmd:
+  - sudo apt-get install git-all
+  - sudo snap install docker

@@ -33,6 +33,7 @@ module "project" {
 module "droplets" {
   CREATE_NON_PRODUCTION_RESOURCES = var.CREATE_NON_PRODUCTION_RESOURCES
   PROJECT_NAME                    = var.PROJECT_NAME
+  PASSWORD                        = var.PASSWORD
   REGION                          = var.REGION
   source                          = "./modules/droplets/"
 }

@@ -53,3 +53,7 @@ variable "CREATE_DATABASES" {
 variable "CREATE_SPACES" {
   default = false
 }
+
+variable "PASSWORD" {
+  default= "password"
+}
