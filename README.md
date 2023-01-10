@@ -34,6 +34,9 @@ DATABASE_USER_PASSWORD          = "project-password"
 
 # SPACES
 CREATE_SPACES                   = true
+
+# DROPLETS
+PASSWORD                        = "password"
 ```
 3. Initialize terraform running `terraform init`.
 4. Verify the infrastructure is the desired one taking a look to it running `terraform plan`.
