@@ -14,3 +14,4 @@ chpasswd:
 runcmd:
   - sudo apt-get install git-all
   - sudo snap install docker
+  - sudo apt-get install make
